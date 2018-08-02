@@ -7,7 +7,7 @@ let db = {
     mlab: 'mongodb://localhost:27017/TodoApp'
 };
 
-mongoose.connect(db.localhost || db.mlab, {
+mongoose.connect(process.env.PORT ? db.localhost || db.mlab, {
     useNewUrlParser: true
 });
 
